@@ -91,6 +91,11 @@ class PrimeNumbers():
                 return
                 
 
+###################################################################################
+###################################################################################
+
+
+
 class Test_Primes(unittest.TestCase):
     def test_zero_upper(self):
         self.assertRaises(RuntimeError, lambda: PrimeNumbers(upper=0))
@@ -154,3 +159,7 @@ class Test_Primes(unittest.TestCase):
 #if '__main__' == __name__:
 #    unittest.main()
 
+
+primeTime = PrimeNumbers(upper=100000)
+primeTime.add_primes()
+primeTime.close()
