@@ -1,4 +1,7 @@
-Ths program calculates and stores every prime from 2 to (whatever the largest integer python can handle)
+[![Build Status](https://travis-ci.com/boxoforanmore/PrimeFinder.svg?branch=master)](https://travis-ci.com/boxoforanmore/PrimeFinder)
+
+
+This program calculates and stores every prime from 2 to (whatever the largest integer python can handle)
 
 **Be sure to close the run with `.close` to save a file**
 
