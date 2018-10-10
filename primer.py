@@ -1,6 +1,6 @@
 import unittest
 import csv
-
+from math import sqrt
 
 class PrimeNumbers():
     def __init__(self, lower = 2, upper = 10, filename = 'primesList.log'):
@@ -31,12 +31,12 @@ class PrimeNumbers():
     ## add a break for if prime is more than halfway through the list
     def __is_prime(self, num):
         count = 0
+        high_check = int(sqrt(num) + 1)
         for prime in self.__primes:
             if((num % prime) == 0):
                 return False
-            if count > (len(self.__primes) // 2):
+            if prime > high_check:
                 break
-            count += 1
         return True
 
     def __from_file(self):
@@ -160,6 +160,6 @@ class Test_Primes(unittest.TestCase):
 #    unittest.main()
 
 
-primeTime = PrimeNumbers(upper=100000)
+primeTime = PrimeNumbers(upper=100000000)
 primeTime.add_primes()
 primeTime.close()
